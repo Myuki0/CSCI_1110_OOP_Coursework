@@ -1,0 +1,7 @@
+Account
+--------------
+- id: int
+- balance: double
+- annualInterestRate: double
+- dateCreated: Date
+--------------
