@@ -6,26 +6,31 @@ import java.util.*;
 
 class Exercise9_7 {
 	public static void main(String[] args) {
-		System.out.println("Account id: " + account1.id);
-		
 		//create an Account object with an account ID of 1122, a balance of $20,000, and an annual interest rate of 4.5%. 
-		Account account1 = new Account(1122, 20000, 0.045);
+		Account account = new Account(1122, 20000, 0.045);
+		System.out.println("Account ID: " + account.getId());
+		System.out.println("Account balance: " + account.getBalance());
+		System.out.println("Account annual interest rate: " + account.getAnnualInterestRate());
+		
+		account.withdraw(2500);
+		account.deposit(3000);
+		System.out.println("Account balance: " + account.getBalance());
+		System.out.println("Monthly Interest: " + account.getMonthlyInterest());
 	}
 }
 class Account{
-	private int id = 0;
-	private double balance = 0;
-	private double annualInterestRate = 0;
+
+	private int id;
+	private double balance;
+	private double annualInterestRate;
 	private Date dateCreated;
-	double monthlyInterestRate = 0;
-	double monthlyInterest = 0;
+	public double monthlyInterestRate;
 		
 	//Construct default account
-	Account(){
-				
+	public Account(){	
 	}
 	//Construct account with specififed values
-	Account(int newId, double newBalance, double annualInterestRate){
+	public Account(int newId, double newBalance, double newAnnualInterestRate){
 		id = newId;
 		balance = newBalance;
 		annualInterestRate = newAnnualInterestRate;
@@ -41,29 +46,26 @@ class Account{
 		return annualInterestRate;
 	}
 	//Accessor method for dateCreated
-	public Date getDateCreated(){
-		java.util.Date dateCreated = account.getDateCreated();
+	public Date getDateCreated(Date dateCreated){
+		java.util.Date date = new java.util.Date();
 		return dateCreated;
 	}
 	//Return monthly interest rate
-	public double getMonthlyInterestRate(){
-		double monthlyInterestRate = annualInterestRate / 12;
-		return monthlyInterestRate;
+	public double getMonthlyInterestRate(double monthlyInterestRate){
+		return annualInterestRate / 12;
 	}
 	//return monthly interest
-	public double getMonthlyInterest(){
-		double monthlyInterest = monthlyInterestRate * balance;
-		return monthlyInterest;
+	public double getMonthlyInterest(double monthlyInterest){
+		monthlyInterestRate = getMonthlyInterestRate();
+		return monthlyInterestRate * balance;
 	}
 	//remove money from the account
-	public double withdraw(){
-		double withdrawAmount = 0;
+	public double withdraw(double withdrawAmount){
 		balance = balance - withdrawAmount;
 		return balance;
 	}
 	//add money to the account
-	public double deposit(){
-		double depositAmount = 0;
+	public double deposit(double depositAmount){
 		balance = balance + depositAmount;
 		return balance;
 	}	
