@@ -1,22 +1,34 @@
-/*Trayce Martineau
-Fri Oct 18, 2019
-Exercise 9-7: Planning
-*/
+/** Trayce Martineau
+Wed OCT 23, 2019
+Exercise 9_1 **/
 
+import java.util.*;
+
+class Exercise9_7 {
+	public static void main(String[] args) {
+		System.out.println("Account id: " + account1.id);
+		
+		//create an Account object with an account ID of 1122, a balance of $20,000, and an annual interest rate of 4.5%. 
+		Account account1 = new Account(1122, 20000, 0.045);
+	}
+}
 class Account{
 	private int id = 0;
 	private double balance = 0;
 	private double annualInterestRate = 0;
-	private Date dateCreated = 0;
-	
+	private Date dateCreated;
+	double monthlyInterestRate = 0;
+	double monthlyInterest = 0;
+		
 	//Construct default account
 	Account(){
-		
+				
 	}
 	//Construct account with specififed values
-	Account(int newId, double newBalance){
-		id = newid;
+	Account(int newId, double newBalance, double annualInterestRate){
+		id = newId;
 		balance = newBalance;
+		annualInterestRate = newAnnualInterestRate;
 	}
 	//Return balance
 	public double getBalance(){

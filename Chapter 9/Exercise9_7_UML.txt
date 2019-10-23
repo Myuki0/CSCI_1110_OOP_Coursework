@@ -5,3 +5,12 @@ Account
 - annualInterestRate: double
 - dateCreated: Date
 --------------
+Account(newId: double, newBalance: double)
++getBalance(): double
++getId(): double
++getAnnualInterestRate(): double
++getDateCreated(): Date
++getMonthlyInterestRate(): double
++getMonthlyInterest(): double
++withdraw(): double
++Deposit(): double
