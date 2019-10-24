@@ -6,10 +6,13 @@ Account
 - dateCreated: Date
 --------------
 Account(newId: double, newBalance: double)
-+getBalance(): double
-+getId(): double
-+getAnnualInterestRate(): double
-+getDateCreated(): Date
++getBalance(balance: double): double
++setBalance(newBalance: double)
++getId(id: int): int
++setId(newId: int)
++getAnnualInterestRate(AnnualInterestRate: double): double
++setAnnualInterestRate(newAnnualInterestRate: double)
++getDateCreated(): String
 +getMonthlyInterestRate(): double
 +getMonthlyInterest(): double
 +withdraw(): double
