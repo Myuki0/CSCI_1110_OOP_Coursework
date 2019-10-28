@@ -1,0 +1,19 @@
+MyInteger
+---------
++MyInteger: int
++value: int
+---------
++getValue(value: int): int
++isEven(value: int): boolean
++isOdd(value: int): boolean
++isPrime(value: int): boolean
++isEven(value: MyInteger): boolean
++isOdd(value: MyInteger): boolean
++isPrime(value: MyInteger): boolean
++isEven(value: MyInteger): boolean
++isOdd(value: MyInteger): boolean
++isPrime(value: MyInteger): boolean
++equals(value: int): boolean
++equals(value: MyInteger): boolean
++parseInt(chars: char[])
++parseInt(string: String)
