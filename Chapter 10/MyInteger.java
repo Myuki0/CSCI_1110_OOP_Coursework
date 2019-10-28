@@ -3,7 +3,7 @@ import java.util.*;
 public class MyInteger {
 	private int value;
 	
-	public MyInteger(intnewValue){
+	public MyInteger(int newValue){
 		value = newValue;
 	}
 	public int getValue(){
@@ -44,19 +44,25 @@ public class MyInteger {
 	public Boolean isPrime(MyInteger myInteger){
 		return myInteger.isPrime();
 	}
-
+/*
 	public Boolean equals(int value){
-	
+		return value;
 	}
-	/*
+
 	public Boolean equals(MyInteger myInteger){
-		
+		return MyInteger.myInteger;
 	}
-	public char[] parseInt(char[] characters){
-		
+	
+	public char parseInt(char a, int c){
+		a = '2';
+		c = Integer.parseInt(String.valueOf(a));
+		a = c;
+		return a;
 	}
-	public String parseInt(String string){
-		
-}
-*/
+	*/
+	public String parseInt(String s){
+		s = "300";
+		int i = Integer.parseInt(s);
+		return s;
+	}
 }
