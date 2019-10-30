@@ -7,9 +7,9 @@ MyInteger
 +isEven(): boolean
 +isOdd(): boolean
 +isPrime(): boolean
-+isEven(value: MyInteger): boolean
-+isOdd(value: MyInteger): boolean
-+isPrime(value: MyInteger): boolean
++isEven(num: int): boolean
++isOdd(num: int): boolean
++isPrime(num: int): boolean
 +isEven(myInteger: MyInteger): boolean
 +isOdd(myInteger: MyInteger): boolean
 +isPrime(myInteger: MyInteger): boolean
