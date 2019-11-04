@@ -1,7 +1,7 @@
 /* Trayce Martineau
 Account class for assignment 10-30
 Thu OCT 30, 2019*/
-import java.util.Date;
+import java.util.*;
 
 public class Account{
 
@@ -64,7 +64,14 @@ public class Account{
 
 	//remove money from the account
 	public void withdraw(double withdrawAmount){
-		balance = balance - withdrawAmount;
+		if(withdrawAmount > getBalance()){
+			System.out.println("CANNOT WITHDRAW MORE THAN BALANCE");
+			balance = balance;
+		}
+		else{
+			balance = balance - withdrawAmount;			
+		}
+
 	}
 	//add money to the account
 	public void deposit(double depositAmount){
