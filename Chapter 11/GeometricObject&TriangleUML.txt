@@ -1,0 +1,25 @@
+GeometricObject ___
+---------------    |
+side1: double	   |
+side2: double      |
+side3: double	   |
+---------------	   |
+	               |
+	               |
+	               |
+	               |
+	               |
+Triangle  <--------!
+---------------
+side1: double
+side2: double
+side3: double
+---------------
+Triangle()
+Triangle(newSide1: double, newSide2: double, newSide3: double)
+getSide1(side1: double)
+getSide2(side2: double)
+getSide3(side3: double)
+getArea(area: double)
+getPerimeter(perimeter: double)
+toString(a: String)
