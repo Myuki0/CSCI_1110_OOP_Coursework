@@ -1,0 +1,29 @@
+GeometricObject <------------------!
+---------------    				   |
+color: String	   				   |
+filled: boolean	  				   |
+---------------	  				   |
+getColor(): String				   |
+getFill(): Boolean				   |
+					               |
+					               |
+					               |
+					               |
+Triangle  -------------------------!
+---------------
+side1: double
+side2: double
+side3: double
+color: String
+filled: boolean
+---------------
+Triangle()
+Triangle(newSide1: double, newSide2: double, newSide3: double, newColor: String, newFill: boolean)
+getSide1(side1: double): double
+getSide2(side2: double): double
+getSide3(side3: double): double
+getArea(area: double): double
+getPerimeter(perimeter: double): double
+toString(): String
+getColor(): String
+getFill(): Boolean
