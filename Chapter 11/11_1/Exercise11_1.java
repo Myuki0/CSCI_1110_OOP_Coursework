@@ -32,7 +32,7 @@ class Exercise11_1 {
 		//accept input for whether or not it is filled
 		System.out.print("Filled, true or false: ");
 		myFill = input.nextBoolean();
-		//creat the traingle using the values entered
+		//create the traingle using the values entered
 		Triangle myShape = new Triangle(mySide1, mySide2, mySide3, myColor, myFill);
 		//seperate the end result from the input
 		for (int i = 0; i < 10; i++){
@@ -45,6 +45,6 @@ class Exercise11_1 {
 		System.out.println("Area of the triangle: " + myShape.getArea());
 		System.out.println("Perimeter of the triangle: " + myShape.getPerimeter());
 		System.out.println("Triangle color: " + myShape.getColor());
-		System.out.println("The triangle is filled: " + myShape.getFill());
+		System.out.println("The triangle is filled: " + myShape.isFilled());
 	}
 }
