@@ -13,18 +13,23 @@ class Exercise11_3 {
 		int a = input.nextInt();
 		SavingsAccount testSavings = new SavingsAccount(a, 100);
 		CheckingAccount testChecking = new CheckingAccount(a, 100); 
-		System.out.println(testChecking.toString());
 		
+		//Using toString() methods
+		System.out.println(testSavings.toString());
+		//Testing the new withdraw function for Savings account
 		System.out.print("Enter Withdraw amount: ");
 		double withdrawAmount = input.nextDouble();
 		testSavings.withdraw(withdrawAmount);
 		System.out.println("New Balance: $" + testSavings.getBalance());
 		
 		
-		
+		//Using toString() methods
+		System.out.println(testChecking.toString());
+		//Testing the new withdraw function for Checking account
 		System.out.print("Enter Withdraw amount: ");
 		withdrawAmount = input.nextDouble();
 		testChecking.withdraw(withdrawAmount);
 		System.out.println("New Balance: $" + testChecking.getBalance());
+		
 	}
 }

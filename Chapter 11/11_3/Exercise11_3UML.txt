@@ -1,19 +1,35 @@
-Account
+Account <-------------------------------------------------------!
+--------------													|	
+- id: int														|
+- balance: double												|
+- annualInterestRate: double									|
+- dateCreated: Date												|
+--------------													|
+Account(newId: double, newBalance: double)						|
++getBalance(balance: double): double							|
++setBalance(newBalance: double)									|
++getId(id: int): int											|
++setId(newId: int)												|
++getAnnualInterestRate(AnnualInterestRate: double): double		|
++setAnnualInterestRate(newAnnualInterestRate: double)			|
++getDateCreated(): String										|
++getMonthlyInterestRate(): double								|
++getMonthlyInterest(): double									|
++withdraw(): double												|
++Deposit(): double												|
+																|
+																|
+																|
+SavingsAccount--------------------------------------------------|
+--------------													|
++SavingsAccount()												|
++SavingsAccount(newId: int, newBalance: int)					|
++withdraw(): double												|
++toString(): String												|
+																|
+CheckingAccount-------------------------------------------------!
 --------------
-- id: int
-- balance: double
-- annualInterestRate: double
-- dateCreated: Date
---------------
-Account(newId: double, newBalance: double)
-+getBalance(balance: double): double
-+setBalance(newBalance: double)
-+getId(id: int): int
-+setId(newId: int)
-+getAnnualInterestRate(AnnualInterestRate: double): double
-+setAnnualInterestRate(newAnnualInterestRate: double)
-+getDateCreated(): String
-+getMonthlyInterestRate(): double
-+getMonthlyInterest(): double
++CheckingAccount()
++CheckingAccount(newId: int, newBalance: int)
 +withdraw(): double
-+Deposit(): double
++toString(): String

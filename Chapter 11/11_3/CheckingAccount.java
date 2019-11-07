@@ -6,10 +6,6 @@ public class CheckingAccount
 		extends Account {
 	//default account
 	public CheckingAccount(){
-		id = 0;
-		balance = 0;
-		annualInterestRate = 0;
-		dateCreated = new Date();	
 	}
 	//creat new Checking account
 	public CheckingAccount(int newId, int newBalance){
@@ -28,7 +24,6 @@ public class CheckingAccount
 		}	
 	}
 	public String toString(){
-		return "Checking account #" + getId() + " balance: " + getBalance();
-		
+		return "Checking account #" + getId()+ " balance: " + getBalance() + " | Date Created: " + getDateCreated();
 	}
 }

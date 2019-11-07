@@ -5,11 +5,7 @@ import java.util.*;
 public class SavingsAccount
 		extends Account {
 	//default account
-	public SavingsAccount(){
-		id = 0;
-		balance = 0;
-		annualInterestRate = 0;
-		dateCreated = new Date();	
+	public SavingsAccount(){	
 	}
 	//creat new savings account
 	public SavingsAccount(int newId, int newBalance){
@@ -26,5 +22,7 @@ public class SavingsAccount
 			balance = balance - withdrawAmount;			
 		}	
 	}
-	
+	public String toString(){
+		return "Savings account #" + getId()+ " balance: " + getBalance() + "  | Date Created: " + getDateCreated();
+	}
 }
