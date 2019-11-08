@@ -8,8 +8,5 @@ class Untitled {
 		for(int i = 0; i < 101; i++){
 			test[i] = random.nextInt();
 		}
-		for(int i = 0; i < 101; i++){
-			System.out.println(test[i]);
-		}
 	}
 }
