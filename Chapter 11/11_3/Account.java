@@ -70,10 +70,12 @@ public class Account{
 		else{
 			balance = balance - withdrawAmount;			
 		}
-
 	}
 	//add money to the account
 	public void deposit(double depositAmount){
 		balance = balance + depositAmount;
 	}	
+	public String toString(){
+		return "Account #" + getId()+ " balance: " + getBalance() + "  | Date Created: " + getDateCreated();
+	}
 }

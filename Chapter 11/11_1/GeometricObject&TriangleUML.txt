@@ -16,7 +16,7 @@ side2: double
 side3: double
 ---------------
 Triangle()
-Triangle(newSide1: double, newSide2: double, newSide3: double, newColor: String, newFill: boolean)
+Triangle(newSide1: double, newSide2: double, newSide3: double)
 getSide1(): double
 getSide2(): double
 getSide3(): double

@@ -32,8 +32,10 @@ class Exercise11_1 {
 		//accept input for whether or not it is filled
 		System.out.print("Filled, true or false: ");
 		myFill = input.nextBoolean();
-		//create the traingle using the values entered
-		Triangle myShape = new Triangle(mySide1, mySide2, mySide3, myColor, myFill);
+		//create the triangle using the values entered
+		Triangle myShape = new Triangle(mySide1, mySide2, mySide3);
+		myShape.setColor(myColor);
+		myShape.setFilled(myFill);
 		//seperate the end result from the input
 		for (int i = 0; i < 10; i++){
 			System.out.println();

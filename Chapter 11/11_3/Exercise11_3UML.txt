@@ -16,7 +16,8 @@ Account(newId: double, newBalance: double)						|
 +getMonthlyInterestRate(): double								|
 +getMonthlyInterest(): double									|
 +withdraw(): double												|
-+Deposit(): double												|
++Deposit(): double												|	
++toString():													|
 																|
 																|
 																|
@@ -24,12 +25,11 @@ SavingsAccount--------------------------------------------------|
 --------------													|
 +SavingsAccount()												|
 +SavingsAccount(newId: int, newBalance: int)					|
-+withdraw(): double												|
 +toString(): String												|
 																|
 CheckingAccount-------------------------------------------------!
 --------------
 +CheckingAccount()
 +CheckingAccount(newId: int, newBalance: int)
-+withdraw(): double
++withdraw(overdraft: double): double
 +toString(): String

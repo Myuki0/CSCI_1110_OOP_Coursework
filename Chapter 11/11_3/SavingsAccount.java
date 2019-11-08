@@ -13,16 +13,7 @@ public class SavingsAccount
 		balance 	= newBalance;
 		dateCreated = new Date();
 	}
-	public void withdraw(double withdrawAmount){
-		if(withdrawAmount > getBalance()){
-			System.out.println("CANNOT WITHDRAW MORE THAN CURRENT BALANCE");
-			balance = balance;
-		}
-		else{
-			balance = balance - withdrawAmount;			
-		}	
-	}
 	public String toString(){
-		return "Savings account #" + getId()+ " balance: " + getBalance() + "  | Date Created: " + getDateCreated();
+		return "Savings " + super.toString();
 	}
 }

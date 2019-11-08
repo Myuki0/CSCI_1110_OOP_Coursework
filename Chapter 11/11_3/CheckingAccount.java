@@ -24,6 +24,6 @@ public class CheckingAccount
 		}	
 	}
 	public String toString(){
-		return "Checking account #" + getId()+ " balance: " + getBalance() + " | Date Created: " + getDateCreated();
+		return "Checking " + super.toString();
 	}
 }
