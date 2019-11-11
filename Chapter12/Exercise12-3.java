@@ -1,12 +1,28 @@
+/*Trayce Martineau
+MON Nov 11, 2019*/
+
+
 import java.util.*;
 
-class Untitled {
-	public static void main(String[] args) {
+class Exercise12_3 {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
 		Random random = new Random();
-		int[] test = new int[100];
+
 		
-		for(int i = 0; i < 101; i++){
-			test[i] = random.nextInt();
+		System.out.print("Enter index value: ");
+		int user = input.nextInt(); 
+		try{
+			int[] test = new int[100];
+			for(int i = 1; i < 101; i++){
+				test[i] = random.nextInt();
+				System.out.println(test[user]);
+			}
+		}
+		
+		catch(ArrayIndexOutOfBoundsException e){
+			
+			System.out.println(e);
 		}
 	}
 }
