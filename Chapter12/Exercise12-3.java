@@ -8,21 +8,20 @@ class Exercise12_3 {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		Random random = new Random();
-
+		int[] test 	  = new int[100];
+		int index;
 		
 		System.out.print("Enter index value: ");
-		int user = input.nextInt(); 
+		index = input.nextInt(); 
 		try{
-			int[] test = new int[100];
 			for(int i = 1; i < 101; i++){
 				test[i] = random.nextInt();
-				System.out.println(test[user]);
 			}
+			System.out.println(test[index]);
+		}
+		catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println("Out of bounds");
 		}
 		
-		catch(ArrayIndexOutOfBoundsException e){
-			
-			System.out.println(e);
-		}
 	}
 }

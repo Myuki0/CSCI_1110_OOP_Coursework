@@ -33,3 +33,6 @@ CheckingAccount-------------------------------------------------!
 +CheckingAccount(newId: int, newBalance: int)
 +withdraw(overdraft: double): double
 +toString(): String
+
+
+Overdraft is a double value in the CheckingAccount's withdraw method, where it will be added to the balance and compared to the withdraw amount to make sure nobody can withdraw passed the Balance + the overdraft limit. The savings does not allow you to withdraw passed and the Withdraw method in both Account and Savings reflects that.

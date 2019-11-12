@@ -76,6 +76,7 @@ public class Account{
 		balance = balance + depositAmount;
 	}	
 	public String toString(){
-		return "Account #" + getId()+ " balance: " + getBalance() + "  | Date Created: " + getDateCreated();
+		return "Account #" + getId()+ " balance: " + getBalance() + " | Annual Interest Rate: " + 
+			getAnnualInterestRate() + " | Date Created: " + getDateCreated();
 	}
 }
