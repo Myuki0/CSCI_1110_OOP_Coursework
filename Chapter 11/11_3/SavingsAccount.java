@@ -9,9 +9,16 @@ public class SavingsAccount
 	}
 	//creat new savings account
 	public SavingsAccount(int newId, int newBalance){
-		id 			= newId;
-		balance 	= newBalance;
-		dateCreated = new Date();
+		super(newId, newBalance);
+	}
+	public void withdraw(double withdrawAmount){
+		if(withdrawAmount > getBalance()){
+			System.out.println("CANNOT WITHDRAW MORE THAN CURRENT BALANCE");
+			balance = balance;
+		}
+		else{
+			balance = balance - withdrawAmount;			
+		}
 	}
 	public String toString(){
 		return "Savings " + super.toString();

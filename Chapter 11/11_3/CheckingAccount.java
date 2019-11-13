@@ -7,21 +7,9 @@ public class CheckingAccount
 	//default account
 	public CheckingAccount(){
 	}
-	//creat new Checking account
+	//create new Checking account
 	public CheckingAccount(int newId, int newBalance){
-		id 			= newId;
-		balance 	= newBalance;
-		dateCreated = new Date();
-	}
-	public void withdraw(double withdrawAmount){
-		double overdraft = 500;
-		if(withdrawAmount > (getBalance() + overdraft)){
-			System.out.println("CANNOT WITHDRAW AMOUNT SURPASSING OVERDRAFT");
-			balance = balance;
-		}
-		else{
-			balance = balance - withdrawAmount;			
-		}	
+		super(newId, newBalance);
 	}
 	public String toString(){
 		return "Checking " + super.toString();

@@ -17,7 +17,7 @@ public class Account{
 		annualInterestRate = 0;
 		dateCreated = new Date();	
 	}
-	//Construct account with specififed values
+	//Construct account with specified values
 	public Account(int newId, double newBalance){
 		id 			= newId;
 		balance 	= newBalance;
@@ -60,16 +60,16 @@ public class Account{
 	public double getMonthlyInterest(){
 		return balance * (getMonthlyInterestRate() / 100);
 	}
-
 	//remove money from the account
 	public void withdraw(double withdrawAmount){
-		if(withdrawAmount > getBalance()){
-			System.out.println("CANNOT WITHDRAW MORE THAN CURRENT BALANCE");
+		double overdraft = 500;
+		if(withdrawAmount > (getBalance() + overdraft)){
+			System.out.println("CANNOT WITHDRAW AMOUNT SURPASSING OVERDRAFT");
 			balance = balance;
 		}
 		else{
 			balance = balance - withdrawAmount;			
-		}
+		}	
 	}
 	//add money to the account
 	public void deposit(double depositAmount){
