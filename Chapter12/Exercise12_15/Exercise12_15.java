@@ -46,7 +46,7 @@ public class Exercise12_15 {
 			}
 		}
 		
-		for(int i = 0; i < 101; i++){
+		for(int i = 0; i <= 100; i++){
 			System.out.println(integers[i]);
 		}
 	}
