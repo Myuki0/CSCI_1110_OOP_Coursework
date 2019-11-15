@@ -62,14 +62,7 @@ public class Account{
 	}
 	//remove money from the account
 	public void withdraw(double withdrawAmount){
-		double overdraft = 500;
-		if(withdrawAmount > (getBalance() + overdraft)){
-			System.out.println("CANNOT WITHDRAW AMOUNT SURPASSING OVERDRAFT");
-			balance = balance;
-		}
-		else{
-			balance = balance - withdrawAmount;			
-		}	
+		balance = balance - withdrawAmount;			
 	}
 	//add money to the account
 	public void deposit(double depositAmount){

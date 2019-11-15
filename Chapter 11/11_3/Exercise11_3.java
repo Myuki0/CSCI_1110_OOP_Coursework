@@ -22,27 +22,30 @@ class Exercise11_3 {
 		
 		//Using toString() methods
 		System.out.println(testSavings.toString());
-		//Testing the new withdraw function for Savings account
-		System.out.print("Enter Withdraw amount: ");
-		double withdrawAmount = input.nextDouble();
-		testSavings.withdraw(withdrawAmount);
+		
 		//testing withdraw for checking
 		System.out.print("Enter Deposit Amount: ");
 		double depositAmount = input.nextDouble();
 		testSavings.deposit(depositAmount);
 		System.out.println("New Balance: $" + testSavings.getBalance());
+		//Testing the new withdraw function for Savings account
+		System.out.print("Enter Withdraw amount: ");
+		double withdrawAmount = input.nextDouble();
+		testSavings.withdraw(withdrawAmount);
+		System.out.println("New Balance: $" + testSavings.getBalance());
 		System.out.println("-----------------------------------");
 		
 		//Using toString() methods
 		System.out.println(testChecking.toString());
-		//Testing the new withdraw function for Checking account
-		System.out.print("Enter Withdraw amount: ");
-		withdrawAmount = input.nextDouble();
-		testChecking.withdraw(withdrawAmount);
 		//testing Deposit for checking
 		System.out.print("Enter Deposit Amount: ");
 		depositAmount = input.nextDouble();
 		testChecking.deposit(depositAmount);
+		System.out.println("New Balance: $" + testSavings.getBalance());
+		//Testing the new withdraw function for Checking account
+		System.out.print("Enter Withdraw amount: ");
+		withdrawAmount = input.nextDouble();
+		testChecking.withdraw(withdrawAmount);
 		System.out.println("New Balance: $" + testChecking.getBalance());
 		
 	}

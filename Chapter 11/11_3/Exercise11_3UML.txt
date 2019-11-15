@@ -15,7 +15,7 @@ Account(newId: double, newBalance: double)						|
 +getDateCreated(): String										|
 +getMonthlyInterestRate(): double								|
 +getMonthlyInterest(): double									|
-+withdraw(): double												|
++withdraw(withdrawAmount: double): double								|
 +Deposit(): double												|	
 +toString():													|
 																|
@@ -29,10 +29,9 @@ SavingsAccount--------------------------------------------------|
 																|
 CheckingAccount-------------------------------------------------!
 --------------
++overdraft: double
+--------------
 +CheckingAccount()
 +CheckingAccount(newId: int, newBalance: int)
-+withdraw(overdraft: double): double
++withdraw(withdrawAmount: double): double
 +toString(): String
-
-
-Overdraft is a double value in the CheckingAccount's withdraw method, where it will be added to the balance and compared to the withdraw amount to make sure nobody can withdraw passed the Balance + the overdraft limit. The savings does not allow you to withdraw passed and the Withdraw method in both Account and Savings reflects that.
