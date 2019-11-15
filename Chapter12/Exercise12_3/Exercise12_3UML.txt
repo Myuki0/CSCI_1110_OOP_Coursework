@@ -1,5 +1,0 @@
-Exercise12_3
-------------
-test[]: int array
-index: int
-------------

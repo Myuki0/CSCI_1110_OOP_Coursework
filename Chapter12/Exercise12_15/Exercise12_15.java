@@ -8,17 +8,17 @@ import java.io.*;
 public class Exercise12_15 {
 	public static void main(String[] args) throws IOException{
 		Random random  = new Random();
-		int[] integers = new int [100];
+		int[] test = new int [100];
 		//create file object
 		java.io.File file = new java.io.File("Exercise12_15.txt");
 		//chceck if the file exists
 		if(file.exists()){
-			System.out.println("File exists");
+			System.out.println("File exists. Overwriting...");
 		}
 		try(java.io.PrintWriter output = new java.io.PrintWriter(file)){			
 			for (int i = 0; i < 100; i++){
-				integers[i] = random.nextInt();
-				output.print(integers[i] + " ");
+				test[i] = random.nextInt();
+				output.print(test[i] + " ");
 			}
 		}
 		//part2
@@ -26,28 +26,28 @@ public class Exercise12_15 {
 		Scanner input = new Scanner(file);
 		for (int i = 0; i < 100; i++){
 			while(input.hasNext()){
-			integers[i] = input.nextInt();
+			test[i] = input.nextInt();
 			}
 		}
 		//
-		for(int i = 0; i < integers.length - 1; i++){
-			int currentMin = integers[i];
+		for(int i = 0; i < test.length - 1; i++){
+			int currentMin = test[i];
 			int currentMinIndex = i;
 			
-			for (int j = i + 1; j < integers.length; j++){
-				if(currentMin > integers[j]){
-					currentMin = integers[j];
+			for (int j = i + 1; j < test.length; j++){
+				if(currentMin > test[j]){
+					currentMin = test[j];
 					currentMinIndex = j;
 				}
 			}
 			if(currentMinIndex !=i){
-				integers[currentMinIndex] = integers[i];
-				integers[i] = currentMin;
+				test[currentMinIndex] = test[i];
+				test[i] = currentMin;
 			}
 		}
 		
-		for(int i = 0; i <= 100; i++){
-			System.out.println(integers[i]);
+		for(int i = 0; i < test.length; i++){
+			System.out.println(test[i]);
 		}
 	}
 }
