@@ -16,7 +16,7 @@ Account(newId: double, newBalance: double)						|
 +getMonthlyInterestRate(): double								|
 +getMonthlyInterest(): double									|
 +withdraw(withdrawAmount: double): double								|
-+Deposit(): double												|	
++deposit(depositAmount: double): double												|	
 +toString():													|
 																|
 																|
