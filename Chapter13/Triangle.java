@@ -15,8 +15,6 @@ class Triangle
 		this.side1  = side1;
 		this.side2  = side2;
 		this.side3  = side3;
-		this.color  = color;
-		this.filled = filled;
 	}
 	//return sides
 	public double getSide1(){

@@ -17,5 +17,6 @@ class Exercise13_1 {
 		System.out.print("Triangle filled, True or False: ");
 		Boolean e = input.nextBoolean();
 		Triangle testTriangle = new Triangle(a, b, c, d, e);
+		System.out.println(testTriangle.toString());
 	}
 }
