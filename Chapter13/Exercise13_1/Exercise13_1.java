@@ -16,7 +16,10 @@ class Exercise13_1 {
 		String d = input.next();
 		System.out.print("Triangle filled, True or False: ");
 		Boolean e = input.nextBoolean();
-		Triangle testTriangle = new Triangle(a, b, c, d, e);
+		Triangle testTriangle = new Triangle(a, b, c);
+		testTriangle.setColor(d);
+		testTriangle.setFilled(e);
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println(testTriangle.toString());
 	}
 }
