@@ -1,6 +1,5 @@
 /*Trayce Martineau
-WED Nov 20, 2019*/
+FRI Nov 22, 2019*/
 public interface Colorable {
-	
-	public String howToColor();
+	public void howToColor();
 }
