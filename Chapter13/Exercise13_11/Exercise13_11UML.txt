@@ -1,0 +1,36 @@
+Geometric Object		<-------------------------------|
+----------------										|
+-color: String											|
+-filled: boolean										|
+-dateCreated: Date										|
+----------------										|
+#GeometricObject()										|
+#GeometricObject(color: String, filled: boolean)		|
++getColor(): String										|
++setColor(): String										|
++isFilled(): boolean									|
++setFilled(): boolean									|
++toString(): String										|
++getArea(): double										|
++getPerimeter(): double									|
+														|
+														|
+														|
+Octagon	 -----------------------------------------------|
+--------
++sides: double
+--------
++Octagon()
++Octagon(sides: double)
++getSides(): double
++getArea(): double
++getPerimeter(): double
++toString(): String
+
+Comparable
+----------
++compareTo(): int
+
+Cloneable
+---------
++clone(): Object
