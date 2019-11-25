@@ -24,7 +24,7 @@ public class FontDemo extends Application {
 
     // Create a label and set its properties
     Label label = new Label("JavaFX");
-    label.setFont(Font.font("Times New Roman", 
+    label.setFont(Font.font("Courier", 
       FontWeight.BOLD, FontPosture.ITALIC, 20));
     pane.getChildren().add(label);
 

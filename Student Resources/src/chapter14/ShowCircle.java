@@ -15,8 +15,8 @@ public class ShowCircle extends Application {
     circle.setCenterX(100);
     circle.setCenterY(100);
     circle.setRadius(50);
-    circle.setStroke(Color.BLACK);
-    circle.setFill(null);
+    circle.setStroke(Color.RED);
+    circle.setFill(Color.GREEN);
     
     // Create a pane to hold the circle 
     Pane pane = new Pane();
