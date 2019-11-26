@@ -1,4 +1,3 @@
-package chapter14;
 
 import java.util.Calendar; 
 import java.util.GregorianCalendar;
@@ -118,7 +117,34 @@ public class ClockPane extends Pane {
     getChildren().clear();  
     getChildren().addAll(circle, t1, t2, t3, t4, sLine, mLine, hLine);
   }
-  
+  /*
+  public Boolean hourHandVisible(){
+    
+  }
+  public Boolean minuteHandVisible(){
+    
+  }
+  public Boolean secondHandVisible(){
+    
+  }
+  public Boolean setHourHandVisible(Boolean hourVisible){
+    
+  }
+  public Boolean setMinuteHandVisible(Boolean minuteVisible){
+    
+  }
+  public Boolean setSecondHandVisible(Boolean secondVisible){
+    
+  }
+  public Boolean isHourVisible(){
+    
+  }
+  public Boolean isMinuteVisible(){
+    
+  }
+  public Boolean isSecondVisible(){
+    
+  */
   @Override
   public void setWidth(double width) {
     super.setWidth(width);
