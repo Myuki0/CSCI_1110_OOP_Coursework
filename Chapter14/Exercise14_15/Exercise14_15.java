@@ -1,3 +1,7 @@
+/*Modified ShowPolygon.java
+Trayce Martineau
+MON Dec 2, 2019*/
+
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
@@ -8,15 +12,21 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.text.*;
 import javafx.scene.control.*;
 
-public class ShowPolygon extends Application {
+public class Exercise14_15 extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {
+		StackPane pane = new StackPane();
 		
+		//STOP text
+		Text stop = new Text(200 / 1.5, 200 + 20, "STOP");
+		stop.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.REGULAR, 50));
+		stop.setFill(Color.WHITE);
+		
+		pane.getChildren().add(new MyPolygon());
+		pane.getChildren().add(stop);
 		// Create a scene and place it in the stage
-		Scene scene = new Scene(new MyPolygon(), 400, 400);
-		
-		
-		primaryStage.setTitle("ShowPolygon"); // Set the stage title
+		Scene scene = new Scene(pane, 400, 400);
+		primaryStage.setTitle("Show stop sign"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
 		primaryStage.show(); // Display the stage
 		
@@ -33,22 +43,19 @@ public class ShowPolygon extends Application {
 
 class MyPolygon extends Pane {
 	private void paint() {
-		StackPane pane = new StackPane();
-		// Create a polygon and place polygon to pane
+		
+		// Create a polygon
 		Polygon polygon = new Polygon();
 		polygon.setFill(Color.RED);
 		polygon.setStroke(Color.WHITE);
 		
 		ObservableList<Double> list = polygon.getPoints();
 		
+		//Rotate the Octagon to be like a stop sign
 		polygon.setRotate(22.5);
 		double centerX = getWidth() / 2, centerY = getHeight() / 2;
 		double radius = Math.min(getWidth(), getHeight()) * 0.4;
 		
-		//STOP text
-		Text stop = new Text(centerY, centerX, "STOP");
-		stop.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 50));
-		stop.setFill(Color.WHITE);
 		
 		// s represents the number of sides of the shape
 		// Make sure to update this number when necessary
@@ -58,11 +65,7 @@ class MyPolygon extends Pane {
 			list.add(centerX + radius * Math.cos(2 * i * Math.PI / s)); 
 			list.add(centerY - radius * Math.sin(2 * i * Math.PI / s));
 		}    
-		
-		getChildren().clear();
-		getChildren().add(polygon); 
-		getChildren().add(stop);
-		
+		getChildren().add(polygon);
 	}
 	
 	@Override
@@ -77,6 +80,3 @@ class MyPolygon extends Pane {
 		paint();
 	}
 }
-//change s = 6 to s = 8
-//change polygon.setFill(Color.WHITE) to polygon.setfill(Color.RED)
-//change polygon.setStroke(Color.BLACK) to polygon.setStroke(Color.WHITE)

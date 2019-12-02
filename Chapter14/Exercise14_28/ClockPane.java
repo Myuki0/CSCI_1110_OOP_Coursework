@@ -11,6 +11,9 @@ public class ClockPane extends Pane {
   private int hour;
   private int minute;
   private int second;
+  private Boolean hourVisible;
+  private Boolean minuteVisible;
+  private Boolean secondVisible;
   
   /** Construct a default clock with the current time*/
   public ClockPane() {
@@ -19,9 +22,12 @@ public class ClockPane extends Pane {
 
   /** Construct a clock with specified hour, minute, and second */
   public ClockPane(int hour, int minute, int second) {
-    this.hour = hour;
+    this.hour   = hour;
     this.minute = minute;
     this.second = second;
+    hourVisible   = true;
+    minuteVisible = true;
+    secondVisible = false;
   }
 
   /** Return hour */
@@ -94,7 +100,12 @@ public class ClockPane extends Pane {
     double secondY = centerY - sLength * 
       Math.cos(second * (2 * Math.PI / 60));
     Line sLine = new Line(centerX, centerY, secondX, secondY);
-    sLine.setStroke(Color.RED);
+    if(this.secondVisible == true){
+      sLine.setStroke(Color.RED);
+    }
+    else{
+      sLine.setStroke(Color.WHITE);
+    }
 
     // Draw minute hand
     double mLength = clockRadius * 0.65;
@@ -103,7 +114,12 @@ public class ClockPane extends Pane {
     double minuteY = centerY - mLength * 
       Math.cos(minute * (2 * Math.PI / 60));
     Line mLine = new Line(centerX, centerY, xMinute, minuteY);
-    mLine.setStroke(Color.BLUE);
+    if(this.minuteVisible == true){
+      mLine.setStroke(Color.BLUE);
+    }
+    else{
+      mLine.setStroke(Color.WHITE);
+    }
     
     // Draw hour hand
     double hLength = clockRadius * 0.5;
@@ -112,39 +128,37 @@ public class ClockPane extends Pane {
     double hourY = centerY - hLength *
       Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
     Line hLine = new Line(centerX, centerY, hourX, hourY);
-    hLine.setStroke(Color.GREEN);
+    if(this.hourVisible){
+      hLine.setStroke(Color.GREEN);
+    }
+    else{
+      hLine.setStroke(Color.WHITE);
+    }
+   
     
     getChildren().clear();  
     getChildren().addAll(circle, t1, t2, t3, t4, sLine, mLine, hLine);
   }
-  /*
-  public Boolean hourHandVisible(){
-    
+  //setters for visibility
+  public void setHourHandVisible(){
+    this.hourVisible = hourVisible;
   }
-  public Boolean minuteHandVisible(){
-    
+  public void setMinuteHandVisible(){
+    this.minuteVisible = minuteVisible;
   }
-  public Boolean secondHandVisible(){
-    
+  public void setSecondHandVisible(){
+    this.secondVisible = secondVisible;
   }
-  public Boolean setHourHandVisible(Boolean hourVisible){
-    
+  //return the visibility
+  public Boolean isHourVisible(Boolean hourVisible){
+    return hourVisible;
   }
-  public Boolean setMinuteHandVisible(Boolean minuteVisible){
-    
+  public Boolean isMinuteVisible(Boolean minuteVisible){
+    return minuteVisible;
   }
-  public Boolean setSecondHandVisible(Boolean secondVisible){
-    
+  public Boolean isSecondVisible(Boolean secondVisible){
+    return secondVisible;
   }
-  public Boolean isHourVisible(){
-    
-  }
-  public Boolean isMinuteVisible(){
-    
-  }
-  public Boolean isSecondVisible(){
-    
-  */
   @Override
   public void setWidth(double width) {
     super.setWidth(width);
