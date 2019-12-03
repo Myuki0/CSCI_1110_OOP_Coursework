@@ -27,7 +27,7 @@ public class ClockPane extends Pane {
     this.second = second;
     hourVisible   = true;
     minuteVisible = true;
-    secondVisible = false;
+    secondVisible = true;
   }
 
   /** Return hour */
@@ -63,13 +63,13 @@ public class ClockPane extends Pane {
     paintClock();
   }
   
-  /* Set the current time for the clock */
+  /* Set the current time for the clock */ 
   public void setCurrentTime() {
     // Construct a calendar for the current date and time
     Calendar calendar = new GregorianCalendar();
 
     // Set current hour, minute and second
-    this.hour = calendar.get(Calendar.HOUR_OF_DAY);
+    this.hour   = calendar.get(Calendar.HOUR_OF_DAY);
     this.minute = calendar.get(Calendar.MINUTE);
     this.second = calendar.get(Calendar.SECOND);
     
@@ -140,23 +140,23 @@ public class ClockPane extends Pane {
     getChildren().addAll(circle, t1, t2, t3, t4, sLine, mLine, hLine);
   }
   //setters for visibility
-  public void setHourHandVisible(){
+  public void setHourHandVisible(Boolean hourVisible){
     this.hourVisible = hourVisible;
   }
-  public void setMinuteHandVisible(){
+  public void setMinuteHandVisible(Boolean minuteVisible){
     this.minuteVisible = minuteVisible;
   }
-  public void setSecondHandVisible(){
+  public void setSecondHandVisible(Boolean secondVisible){
     this.secondVisible = secondVisible;
   }
   //return the visibility
-  public Boolean isHourVisible(Boolean hourVisible){
+  public Boolean isHourVisible(){
     return hourVisible;
   }
-  public Boolean isMinuteVisible(Boolean minuteVisible){
+  public Boolean isMinuteVisible(){
     return minuteVisible;
   }
-  public Boolean isSecondVisible(Boolean secondVisible){
+  public Boolean isSecondVisible(){
     return secondVisible;
   }
   @Override
