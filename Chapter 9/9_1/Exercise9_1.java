@@ -1,4 +1,4 @@
-/** Trayce Martineau
+ /** Trayce Martineau
 Fri Oct 18, 2019
 Exercise 9_1 **/
 import java.util.Scanner;
