@@ -1,4 +1,4 @@
-MyInteger
+ MyInteger
 ---------
 +MyInteger: int
 +value: int
