@@ -17,8 +17,8 @@ public class HandleEvent extends Application {
     pane.setAlignment(Pos.CENTER);
     Button btOK = new Button("OK");
     Button btCancel = new Button("Cancel");
-    OKHandlerClass handler1 = new OKHandlerClass();
-    btOK.setOnAction(handler1);
+    OKHandlerClass handler1 = new OKHandlerClass();//create handler
+    btOK.setOnAction(handler1);//register handler
     CancelHandlerClass handler2 = new CancelHandlerClass();
     btCancel.setOnAction(handler2);
     pane.getChildren().addAll(btOK, btCancel);
@@ -39,9 +39,9 @@ public class HandleEvent extends Application {
   }
 } 
 
-class OKHandlerClass implements EventHandler<ActionEvent> {
+class OKHandlerClass implements EventHandler<ActionEvent> { //handler class
   @Override
-  public void handle(ActionEvent e) {
+  public void handle(ActionEvent e) { //handle event
     System.out.println("OK button clicked"); 
   }
 }

@@ -17,8 +17,8 @@ public class TimelineDemo extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     StackPane pane = new StackPane();
-    Text text = new Text(20, 50, "Programming if fun");
-    text.setFill(Color.RED);
+    Text text = new Text(250, 250, "Programming if fun");
+    text.setFill(Color.BLACK);
     pane.getChildren().add(text); // Place text into the stack pane
 
     // Create a handler for changing text
@@ -33,7 +33,7 @@ public class TimelineDemo extends Application {
     
     // Create an animation for alternating text
     Timeline animation = new Timeline(
-      new KeyFrame(Duration.millis(500), eventHandler));
+      new KeyFrame(Duration.millis(50), eventHandler));
     animation.setCycleCount(Timeline.INDEFINITE);
     animation.play(); // Start animation
 

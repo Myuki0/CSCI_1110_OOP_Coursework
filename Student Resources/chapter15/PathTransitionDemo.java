@@ -18,8 +18,8 @@ public class PathTransitionDemo extends Application {
     Pane pane = new Pane();
     
     // Create a rectangle
-    Rectangle rectangle = new Rectangle (0, 0, 25, 50);
-    rectangle.setFill(Color.ORANGE);
+    Rectangle rectangle = new Rectangle (0, 0, 500, 500);
+    rectangle.setFill(Color.GREEN);
     
     // Create a circle
     Circle circle = new Circle(125, 100, 50);
@@ -32,7 +32,7 @@ public class PathTransitionDemo extends Application {
     
     // Create a path transition 
     PathTransition pt = new PathTransition();
-    pt.setDuration(Duration.millis(4000));
+    pt.setDuration(Duration.millis(1));
     pt.setPath(circle);
     pt.setNode(rectangle);
     pt.setOrientation(

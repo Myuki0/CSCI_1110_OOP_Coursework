@@ -28,11 +28,11 @@ public class FadeTransitionDemo extends Application {
     
     // Apply a fade transition to ellipse
     FadeTransition ft = 
-      new FadeTransition(Duration.millis(3000), ellipse);
+      new FadeTransition(Duration.millis(30), ellipse);
     ft.setFromValue(1.0);
     ft.setToValue(0.1);
     ft.setCycleCount(Timeline.INDEFINITE);
-    ft.setAutoReverse(true);
+    ft.setAutoReverse(false);
     ft.play(); // Start animation 
     
     // Control animation

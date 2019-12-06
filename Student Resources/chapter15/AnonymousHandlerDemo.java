@@ -29,6 +29,12 @@ public class AnonymousHandlerDemo extends Application {
         System.out.println("Process New");
       }
     });
+    //Lambda version
+    /*
+     btNew.setOnAction(e -> {
+      System.out.println("Process New");
+    });
+    */
 
     btOpen.setOnAction(new EventHandler<ActionEvent>() {
       @Override // Override the handle method
